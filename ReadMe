@@ -1,0 +1,11 @@
+First step requires to upload all the .class files on to all the instances
+To initiate the code, log in from an Amazon ec2 instance and run the ChordMain program.
+If the Ip address of this server, matches the one set in the Constant class, then this server is designated as the gateway node.
+command: java ChordNodeMain
+both for gateway and other remote server the above command should be executed
+
+If not, the server is designated as any new remote server joining in. The fist server to be initiated should be the one that matches the Gateway address set in the 
+constants class. All the new nodes/Remote server started would join the group via this gateway node. 
+The appropriate functions would then be called automatically started from the ChordNodeMain class
+
+For clarity, GatewayThread class is initiated for gateway node and ChordNodeAction class is initiated for any other remote Server node.
